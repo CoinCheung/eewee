@@ -1,0 +1,774 @@
+/bin/sh ./build.sh --cuda_home /usr/local/cuda --cudnn_home /usr/lib/x86_64-linux-gnu/ --use_tensorrt --tensorrt_home /root/build/TensorRT-6.0.1.5/ --config  Release --build_wheel --update --build --cmake_extra_defines ONNXRUNTIME_VERSION=$(cat ./VERSION_NUMBER)
+./build.sh: 6: ./build.sh: Bad substitution
+2019-09-27 09:36:19,864 Build [INFO] - Build started
+2019-09-27 09:36:19,864 Build [DEBUG] - Running subprocess in '/root/build/onnxruntime'
+['git', 'submodule', 'sync', '--recursive']
+Synchronizing submodule url for 'cmake/external/DNNLibrary'
+Synchronizing submodule url for 'cmake/external/DNNLibrary/third_party/flatbuffers'
+Synchronizing submodule url for 'cmake/external/DNNLibrary/third_party/glog'
+Synchronizing submodule url for 'cmake/external/DNNLibrary/third_party/onnx'
+Synchronizing submodule url for 'cmake/external/DNNLibrary/third_party/onnx/third_party/benchmark'
+Synchronizing submodule url for 'cmake/external/DNNLibrary/third_party/onnx/third_party/pybind11'
+Synchronizing submodule url for 'cmake/external/DNNLibrary/third_party/onnx/third_party/pybind11/tools/clang'
+Synchronizing submodule url for 'cmake/external/DNNLibrary/third_party/protobuf'
+Synchronizing submodule url for 'cmake/external/DNNLibrary/third_party/protobuf/third_party/benchmark'
+Synchronizing submodule url for 'cmake/external/DNNLibrary/third_party/protobuf/third_party/googletest'
+Synchronizing submodule url for 'cmake/external/DNNLibrary/third_party/pybind11'
+Synchronizing submodule url for 'cmake/external/DNNLibrary/third_party/pybind11/tools/clang'
+Synchronizing submodule url for 'cmake/external/date'
+Synchronizing submodule url for 'cmake/external/eigen'
+Synchronizing submodule url for 'cmake/external/gemmlowp'
+Synchronizing submodule url for 'cmake/external/googletest'
+Synchronizing submodule url for 'cmake/external/grpc'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/abseil-cpp'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/benchmark'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/bloaty'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/bloaty/third_party/googletest'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/bloaty/third_party/libFuzzer'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/bloaty/third_party/re2'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/boringssl'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/boringssl-with-bazel'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/cares/cares'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/data-plane-api'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/gflags'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/gflags/doc'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/googleapis'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/googletest'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/libcxx'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/libcxxabi'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/protobuf'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/protobuf/third_party/benchmark'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/protobuf/third_party/googletest'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/protoc-gen-validate'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/upb'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/upb/third_party/protobuf'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/upb/third_party/protobuf/third_party/benchmark'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/upb/third_party/protobuf/third_party/googletest'
+Synchronizing submodule url for 'cmake/external/grpc/third_party/zlib'
+Synchronizing submodule url for 'cmake/external/gsl'
+Synchronizing submodule url for 'cmake/external/mimalloc'
+Synchronizing submodule url for 'cmake/external/nsync'
+Synchronizing submodule url for 'cmake/external/onnx'
+Synchronizing submodule url for 'cmake/external/onnx/third_party/benchmark'
+Synchronizing submodule url for 'cmake/external/onnx/third_party/pybind11'
+Synchronizing submodule url for 'cmake/external/onnx/third_party/pybind11/tools/clang'
+Synchronizing submodule url for 'cmake/external/onnx-tensorrt'
+Synchronizing submodule url for 'cmake/external/onnx-tensorrt/third_party/onnx'
+Synchronizing submodule url for 'cmake/external/onnx-tensorrt/third_party/onnx/third_party/benchmark'
+Synchronizing submodule url for 'cmake/external/onnx-tensorrt/third_party/onnx/third_party/pybind11'
+Synchronizing submodule url for 'cmake/external/onnx-tensorrt/third_party/onnx/third_party/pybind11/tools/clang'
+Synchronizing submodule url for 'cmake/external/protobuf'
+Synchronizing submodule url for 'cmake/external/protobuf/third_party/benchmark'
+Synchronizing submodule url for 'cmake/external/protobuf/third_party/googletest'
+Synchronizing submodule url for 'cmake/external/re2'
+Synchronizing submodule url for 'cmake/external/spdlog'
+Synchronizing submodule url for 'cmake/external/tvm'
+Synchronizing submodule url for 'cmake/external/tvm/3rdparty/HalideIR'
+Synchronizing submodule url for 'cmake/external/tvm/3rdparty/dlpack'
+Synchronizing submodule url for 'cmake/external/tvm/3rdparty/dmlc-core'
+Synchronizing submodule url for 'cmake/external/tvm/3rdparty/rang'
+2019-09-27 09:36:21,575 Build [DEBUG] - Running subprocess in '/root/build/onnxruntime'
+['git', 'submodule', 'update', '--init', '--recursive']
+2019-09-27 09:36:23,629 Build [INFO] - Generating CMake build tree
+2019-09-27 09:36:23,629 Build [DEBUG] - Running subprocess in '/root/build/onnxruntime/build/Linux/Release'
+['/root/build/cmake-3.15.3-Linux-x86_64/bin/cmake', '/root/build/onnxruntime/cmake', '-Donnxruntime_RUN_ONNX_TESTS=OFF', '-Donnxruntime_GENERATE_TEST_REPORTS=ON', '-Donnxruntime_DEV_MODE=ON', '-DPYTHON_EXECUTABLE=/miniconda/envs/py36/bin/python3', '-Donnxruntime_USE_CUDA=ON', '-Donnxruntime_USE_NSYNC=OFF', '-Donnxruntime_CUDNN_HOME=/usr/lib/x86_64-linux-gnu/', '-Donnxruntime_USE_AUTOML=OFF', '-Donnxruntime_CUDA_HOME=/usr/local/cuda', '-Donnxruntime_USE_JEMALLOC=OFF', '-Donnxruntime_USE_MIMALLOC=OFF', '-Donnxruntime_ENABLE_PYTHON=ON', '-Donnxruntime_BUILD_CSHARP=OFF', '-Donnxruntime_BUILD_SHARED_LIB=OFF', '-Donnxruntime_USE_EIGEN_FOR_BLAS=ON', '-Donnxruntime_USE_OPENBLAS=OFF', '-Donnxruntime_USE_MKLDNN=OFF', '-Donnxruntime_USE_MKLML=OFF', '-Donnxruntime_USE_GEMMLOWP=OFF', '-Donnxruntime_USE_NGRAPH=OFF', '-Donnxruntime_USE_OPENVINO=OFF', '-Donnxruntime_USE_OPENVINO_BINARY=OFF', '-Donnxruntime_USE_OPENVINO_SOURCE=OFF', '-Donnxruntime_USE_OPENVINO_MYRIAD=OFF', '-Donnxruntime_USE_OPENVINO_GPU_FP32=OFF', '-Donnxruntime_USE_OPENVINO_GPU_FP16=OFF', '-Donnxruntime_USE_OPENVINO_CPU_FP32=OFF', '-Donnxruntime_USE_OPENVINO_VAD_M=OFF', '-Donnxruntime_USE_NNAPI=OFF', '-Donnxruntime_USE_OPENMP=ON', '-Donnxruntime_USE_TVM=OFF', '-Donnxruntime_USE_LLVM=OFF', '-Donnxruntime_ENABLE_MICROSOFT_INTERNAL=OFF', '-Donnxruntime_USE_BRAINSLICE=OFF', '-Donnxruntime_USE_NUPHAR=OFF', '-Donnxruntime_USE_EIGEN_THREADPOOL=OFF', '-Donnxruntime_USE_TENSORRT=ON', '-Donnxruntime_TENSORRT_HOME=/root/build/TensorRT-6.0.1.5/', '-Donnxruntime_CROSS_COMPILING=OFF', '-Donnxruntime_BUILD_SERVER=OFF', '-Donnxruntime_BUILD_x86=OFF', '-Donnxruntime_USE_FULL_PROTOBUF=ON', '-Donnxruntime_DISABLE_CONTRIB_OPS=OFF', '-Donnxruntime_MSVC_STATIC_RUNTIME=OFF', '-Donnxruntime_ENABLE_LANGUAGE_INTEROP_OPS=OFF', '-DCUDA_CUDA_LIBRARY=/usr/local/cuda/lib64/stubs', '-Donnxruntime_PYBIND_EXPORT_OPSCHEMA=OFF', '-DONNXRUNTIME_VERSION=0.5.0', '-DCMAKE_BUILD_TYPE=Release']
+-- Found PythonInterp: /miniconda/envs/py36/bin/python3 (found suitable version "3.6.9", minimum required is "3.5") 
+enabling optimizations for gemmlowp
+-- GPU_ARCH is not defined. Generating CUDA code for default SMs.
+-- Found TensorRT headers at /root/build/TensorRT-6.0.1.5/include
+-- Find TensorRT libs at /root/build/TensorRT-6.0.1.5/lib/libnvinfer.so;/root/build/TensorRT-6.0.1.5/lib/libnvinfer_plugin.so
+-- NumPy ver. 1.16.4 found (include: /miniconda/envs/py36/lib/python3.6/site-packages/numpy/core/include)
+-- Found PythonInterp: /miniconda/envs/py36/bin/python3 (found version "3.6.9") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/build/onnxruntime/build/Linux/Release
+2019-09-27 09:36:24,715 Build [INFO] - Building targets for Release configuration
+2019-09-27 09:36:24,716 Build [DEBUG] - Running subprocess in '/root/build/onnxruntime'
+['/root/build/cmake-3.15.3-Linux-x86_64/bin/cmake', '--build', '/root/build/onnxruntime/build/Linux/Release', '--config', 'Release']
+[  4%] Built target onnxruntime_mlas
+[ 13%] Built target libprotobuf
+[ 23%] Built target libprotoc
+[ 24%] Built target protoc
+[ 25%] Built target onnx_proto
+[ 28%] Built target re2
+[ 30%] Built target onnxruntime_common
+[ 30%] Built target onnxruntime_mlas_test
+[ 30%] Built target gtest
+[ 40%] Built target onnxruntime_providers_cuda
+[ 40%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/checker.cc.o
+[ 40%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/common/assertions.cc.o
+[ 40%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/common/interned_strings.cc.o
+[ 41%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/common/ir_pb_converter.cc.o
+[ 41%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/common/model_helpers.cc.o
+[ 41%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/common/status.cc.o
+[ 41%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/attr_proto_util.cc.o
+[ 41%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/controlflow/defs.cc.o
+[ 41%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/controlflow/old.cc.o
+[ 41%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/data_type_utils.cc.o
+[ 41%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/function.cc.o
+[ 41%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/generator/defs.cc.o
+[ 42%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/generator/old.cc.o
+[ 42%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/logical/defs.cc.o
+[ 42%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/logical/old.cc.o
+[ 42%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/math/defs.cc.o
+[ 42%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/math/old.cc.o
+[ 42%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/nn/defs.cc.o
+[ 42%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/nn/old.cc.o
+[ 42%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/object_detection/defs.cc.o
+[ 42%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/quantization/defs.cc.o
+[ 43%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/reduction/defs.cc.o
+[ 43%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/reduction/old.cc.o
+[ 43%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/rnn/defs.cc.o
+[ 43%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/rnn/old.cc.o
+[ 43%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/schema.cc.o
+[ 43%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/sequence/defs.cc.o
+[ 43%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/tensor/defs.cc.o
+[ 43%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/tensor/old.cc.o
+[ 43%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/tensor/utils.cc.o
+[ 44%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/tensor_proto_util.cc.o
+[ 44%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/tensor_util.cc.o
+[ 44%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/traditionalml/defs.cc.o
+[ 44%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/defs/traditionalml/old.cc.o
+[ 44%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/onnxifi_utils.cc.o
+[ 44%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/optimizer/optimize.cc.o
+[ 44%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/optimizer/pass.cc.o
+[ 44%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/optimizer/pass_manager.cc.o
+[ 44%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/optimizer/pass_registry.cc.o
+[ 46%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/shape_inference/implementation.cc.o
+[ 46%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/version_converter/convert.cc.o
+[ 46%] Building CXX object onnx/CMakeFiles/onnx.dir/__/external/onnx/onnx/version_converter/helper.cc.o
+[ 46%] Linking CXX static library libonnx.a
+[ 46%] Built target onnx
+[ 60%] Built target onnxruntime_providers
+[ 61%] Built target onnxruntime_test_utils
+[ 62%] Built target onnxruntime_test_utils_for_framework
+[ 64%] Built target onnxruntime_graph
+[ 69%] Built target onnxruntime_framework
+[ 69%] Building CXX object external/onnx-tensorrt/CMakeFiles/nvonnxparser_plugin.dir/InstanceNormalization.cpp.o
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:[m[K In constructor '[01m[Knvinfer1::Dims::Dims()[m[K':
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:205:7:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+ class Dims
+[01;32m[K       ^[m[K
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:205:7:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+ class Dims
+[01;32m[K       ^[m[K
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:[m[K In constructor '[01m[Knvinfer1::Dims2::Dims2()[m[K':
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:92:5:[m[K [01;36m[Knote: [m[Ksynthesized method '[01m[Knvinfer1::Dims::Dims()[m[K' first required here 
+     {
+[01;32m[K     ^[m[K
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:[m[K In constructor '[01m[Knvinfer1::DimsHW::DimsHW()[m[K':
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:124:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = type[1] = DimensionType::kSPATIAL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:124:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = type[1] = DimensionType::kSPATIAL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:124:19:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = type[1] = DimensionType::kSPATIAL;
+[01;32m[K                   ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:124:19:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = type[1] = DimensionType::kSPATIAL;
+[01;32m[K                   ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:[m[K In constructor '[01m[Knvinfer1::DimsHW::DimsHW(int, int)[m[K':
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:136:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = type[1] = DimensionType::kSPATIAL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:136:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = type[1] = DimensionType::kSPATIAL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:136:19:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = type[1] = DimensionType::kSPATIAL;
+[01;32m[K                   ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:136:19:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = type[1] = DimensionType::kSPATIAL;
+[01;32m[K                   ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:[m[K In constructor '[01m[Knvinfer1::DimsCHW::DimsCHW()[m[K':
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:215:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = DimensionType::kCHANNEL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:215:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = DimensionType::kCHANNEL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:216:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[1] = type[2] = DimensionType::kSPATIAL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:216:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[1] = type[2] = DimensionType::kSPATIAL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:216:19:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[1] = type[2] = DimensionType::kSPATIAL;
+[01;32m[K                   ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:216:19:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[1] = type[2] = DimensionType::kSPATIAL;
+[01;32m[K                   ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:[m[K In constructor '[01m[Knvinfer1::DimsCHW::DimsCHW(int, int, int)[m[K':
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:229:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = DimensionType::kCHANNEL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:229:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = DimensionType::kCHANNEL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:230:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[1] = type[2] = DimensionType::kSPATIAL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:230:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[1] = type[2] = DimensionType::kSPATIAL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:230:19:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[1] = type[2] = DimensionType::kSPATIAL;
+[01;32m[K                   ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:230:19:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[1] = type[2] = DimensionType::kSPATIAL;
+[01;32m[K                   ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:[m[K In constructor '[01m[Knvinfer1::DimsNCHW::DimsNCHW()[m[K':
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:325:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = DimensionType::kINDEX;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:325:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = DimensionType::kINDEX;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:326:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[1] = DimensionType::kCHANNEL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:326:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[1] = DimensionType::kCHANNEL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:327:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[2] = type[3] = DimensionType::kSPATIAL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:327:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[2] = type[3] = DimensionType::kSPATIAL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:327:19:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[2] = type[3] = DimensionType::kSPATIAL;
+[01;32m[K                   ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:327:19:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[2] = type[3] = DimensionType::kSPATIAL;
+[01;32m[K                   ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:[m[K In constructor '[01m[Knvinfer1::DimsNCHW::DimsNCHW(int, int, int, int)[m[K':
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:341:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = DimensionType::kINDEX;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:341:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[0] = DimensionType::kINDEX;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:342:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[1] = DimensionType::kCHANNEL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:342:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[1] = DimensionType::kCHANNEL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:343:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[2] = type[3] = DimensionType::kSPATIAL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:343:9:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[2] = type[3] = DimensionType::kSPATIAL;
+[01;32m[K         ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:343:19:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[2] = type[3] = DimensionType::kSPATIAL;
+[01;32m[K                   ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:343:19:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+         type[2] = type[3] = DimensionType::kSPATIAL;
+[01;32m[K                   ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:[m[K At global scope:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:4159:108:[m[K [01;31m[Kerror: [m[K'[01m[KIRNNLayer[m[K' is deprecated [-Werror=deprecated-declarations]
+         RNNOperation op, RNNInputMode mode, RNNDirection dir, Weights weights, Weights bias) TRTNOEXCEPT = 0;
+[01;32m[K                                                                                                            ^[m[K
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:2391:22:[m[K [01;36m[Knote: [m[Kdeclared here
+ class TRT_DEPRECATED IRNNLayer : public ILayer
+[01;32m[K                      ^[m[K
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:4178:78:[m[K [01;31m[Kerror: [m[K'[01m[KIPluginLayer[m[K' is deprecated [-Werror=deprecated-declarations]
+         ITensor* const* inputs, int nbInputs, IPlugin& plugin) TRTNOEXCEPT = 0;
+[01;32m[K                                                                              ^[m[K
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:2953:22:[m[K [01;36m[Knote: [m[Kdeclared here
+ class TRT_DEPRECATED IPluginLayer : public ILayer
+[01;32m[K                      ^[m[K
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:4591:81:[m[K [01;31m[Kerror: [m[K'[01m[KIPluginLayer[m[K' is deprecated [-Werror=deprecated-declarations]
+         ITensor* const* inputs, int nbInputs, IPluginExt& plugin) TRTNOEXCEPT = 0;
+[01;32m[K                                                                                 ^[m[K
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:2953:22:[m[K [01;36m[Knote: [m[Kdeclared here
+ class TRT_DEPRECATED IPluginLayer : public ILayer
+[01;32m[K                      ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferPlugin.h:54:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/plugin.hpp:29[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:26[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferPluginUtils.h:255:18:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::plugin::softmaxTree[m[K' is deprecated [-Werror=deprecated-declarations]
+     softmaxTree* smTree;
+[01;32m[K                  ^[m[K
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferPluginUtils.h:248:3:[m[K [01;36m[Knote: [m[Kdeclared here
+ } softmaxTree; // softmax tree
+[01;32m[K   ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/plugin.hpp:29:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:26[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferPlugin.h:201:77:[m[K [01;31m[Kerror: [m[K'[01m[KRegionParameters[m[K' is deprecated [-Werror=deprecated-declarations]
+ TRT_DEPRECATED_API INvPlugin* createYOLORegionPlugin(RegionParameters params);
+[01;32m[K                                                                             ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferPlugin.h:54:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/plugin.hpp:29[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:26[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferPluginUtils.h:250:23:[m[K [01;36m[Knote: [m[Kdeclared here
+ struct TRT_DEPRECATED RegionParameters
+[01;32m[K                       ^[m[K
+In file included from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/plugin.hpp:29:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:26[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferPlugin.h:284:94:[m[K [01;31m[Kerror: [m[K'[01m[KRegionParameters[m[K' is deprecated [-Werror=deprecated-declarations]
+ TENSORRTAPI nvinfer1::IPluginV2* createRegionPlugin(nvinfer1::plugin::RegionParameters params);
+[01;32m[K                                                                                              ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferPlugin.h:54:0[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/plugin.hpp:29[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:26[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferPluginUtils.h:250:23:[m[K [01;36m[Knote: [m[Kdeclared here
+ struct TRT_DEPRECATED RegionParameters
+[01;32m[K                       ^[m[K
+[01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:[m[K In function '[01m[Kbool is_CHW(const nvinfer1::Dims&)[m[K':
+[01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:43:16:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+           dims.type[0] == nvinfer1::DimensionType::kCHANNEL &&
+[01;32m[K                ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+[01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:43:16:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+           dims.type[0] == nvinfer1::DimensionType::kCHANNEL &&
+[01;32m[K                ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+[01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:43:16:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+           dims.type[0] == nvinfer1::DimensionType::kCHANNEL &&
+[01;32m[K                ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+[01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:44:16:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+           dims.type[1] == nvinfer1::DimensionType::kSPATIAL &&
+[01;32m[K                ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+[01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:44:16:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+           dims.type[1] == nvinfer1::DimensionType::kSPATIAL &&
+[01;32m[K                ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+[01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:44:16:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+           dims.type[1] == nvinfer1::DimensionType::kSPATIAL &&
+[01;32m[K                ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+[01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:45:16:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+           dims.type[2] == nvinfer1::DimensionType::kSPATIAL);
+[01;32m[K                ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+[01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:45:16:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+           dims.type[2] == nvinfer1::DimensionType::kSPATIAL);
+[01;32m[K                ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+[01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:45:16:[m[K [01;31m[Kerror: [m[K'[01m[Knvinfer1::Dims::type[m[K' is deprecated [-Werror=deprecated-declarations]
+           dims.type[2] == nvinfer1::DimensionType::kSPATIAL);
+[01;32m[K                ^[m[K
+In file included from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntime.h:59:0[m[K,
+                 from [01m[K/root/build/TensorRT-6.0.1.5/include/NvInfer.h:53[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.hpp:24[m[K,
+                 from [01m[K/root/build/onnxruntime/cmake/external/onnx-tensorrt/InstanceNormalization.cpp:23[m[K:
+[01m[K/root/build/TensorRT-6.0.1.5/include/NvInferRuntimeCommon.h:211:47:[m[K [01;36m[Knote: [m[Kdeclared here
+     TRT_DEPRECATED DimensionType type[MAX_DIMS];  //!< The type of each dimension.
+[01;32m[K                                               ^[m[K
+cc1plus: all warnings being treated as errors
+external/onnx-tensorrt/CMakeFiles/nvonnxparser_plugin.dir/build.make:101: recipe for target 'external/onnx-tensorrt/CMakeFiles/nvonnxparser_plugin.dir/InstanceNormalization.cpp.o' failed
+make[2]: *** [external/onnx-tensorrt/CMakeFiles/nvonnxparser_plugin.dir/InstanceNormalization.cpp.o] Error 1
+CMakeFiles/Makefile2:2098: recipe for target 'external/onnx-tensorrt/CMakeFiles/nvonnxparser_plugin.dir/all' failed
+make[1]: *** [external/onnx-tensorrt/CMakeFiles/nvonnxparser_plugin.dir/all] Error 2
+Makefile:162: recipe for target 'all' failed
+make: *** [all] Error 2
+Traceback (most recent call last):
+  File "/root/build/onnxruntime/tools/ci_build/build.py", line 1010, in <module>
+    sys.exit(main())
+  File "/root/build/onnxruntime/tools/ci_build/build.py", line 953, in main
+    build_targets(cmake_path, build_dir, configs, args.parallel)
+  File "/root/build/onnxruntime/tools/ci_build/build.py", line 451, in build_targets
+    run_subprocess(cmd_args)
+  File "/root/build/onnxruntime/tools/ci_build/build.py", line 194, in run_subprocess
+    return subprocess.run(args, cwd=cwd, check=True, stdout=stdout, stderr=stderr, env=my_env, shell=shell)
+  File "/miniconda/envs/py36/lib/python3.6/subprocess.py", line 438, in run
+    output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/root/build/cmake-3.15.3-Linux-x86_64/bin/cmake', '--build', '/root/build/onnxruntime/build/Linux/Release', '--config', 'Release']' returned non-zero exit status 2.
+[01;32m[[01;32mroot[32m@zzy141 [33m~/build/onnxruntime[32m][0m#[K
